@@ -38,8 +38,8 @@ claude plugin install daily-news-digest@daily-news-digest
 | Wire | Shopify official blog + changelog (7 days), same-day AI + ecom |
 | X | Launches, Shopify, AI, GitHub chatter |
 | LinkedIn | How operators and Shopify people frame the same news |
-| GitHub | Trending / releases (agents, MCP, commerce) |
-| AI Engineer | New [@aiDotEngineer](https://www.youtube.com/@aiDotEngineer) uploads (title + URL, 14 days) |
+| GitHub | `scripts/fetch-github.sh` (API — not trending HTML) |
+| AI Engineer | `scripts/fetch-youtube.sh` (RSS — not `/videos` HTML) |
 
 Edit search strings in [references/rails.md](references/rails.md) only.
 
@@ -59,6 +59,8 @@ See [references/file.md](references/file.md). Chat briefing is enough if nothing
 SKILL.md
 references/rails.md
 references/file.md
+scripts/fetch-youtube.sh
+scripts/fetch-github.sh
 .claude-plugin/
 skills/daily-news-digest → same skill (plugin discovery)
 ```

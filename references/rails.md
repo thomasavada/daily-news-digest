@@ -52,26 +52,33 @@ One sentence per rail. `limit: 5`, `min_score_threshold: 0.2`.
 
 Window: last 7 days when the snippet has a date. `open_page` if readable; otherwise keep the LinkedIn URL + snippet.
 
-## GitHub (`web_search`)
+## GitHub
 
-| Rail | Query |
-|---|---|
-| Trending | `site:github.com/trending AI OR agent OR MCP` |
-| Releases | `site:github.com (Shopify OR "agentic commerce" OR MCP) (release OR released) 2026` |
-| New | `"we just open sourced" OR "released v" (agent OR MCP OR shopify) site:github.com` |
+Do not fetch `github.com/trending` HTML.
 
-`open_page` github.com/trending or the repo if it looks like a real launch (release notes / README), not a one-star toy.
+Every run, from this skill folder:
+
+```bash
+bash scripts/fetch-github.sh
+```
+
+That hits the GitHub search API for: new agent/MCP repos (7d), `org:Shopify` pushes (7d), popular MCP repos pushed (7d). Drop 0-star theme noise.
 
 ## AI Engineer YouTube
 
-Channel: [youtube.com/@aiDotEngineer](https://www.youtube.com/@aiDotEngineer) · site [ai.engineer](https://ai.engineer)
+Channel: [youtube.com/@aiDotEngineer](https://www.youtube.com/@aiDotEngineer) · id `UCLKPca3kwwd-B59HNr-_lvA` · site [ai.engineer](https://ai.engineer)
 
-| Rail | Query | Window |
-|---|---|---|
-| Uploads | `site:youtube.com/@aiDotEngineer` | **14 days** |
-| Site | `site:ai.engineer (talk OR conference OR schedule)` | 14 days |
+Do not fetch `/videos` HTML.
 
-Every run: `open_page` `https://www.youtube.com/@aiDotEngineer/videos`. Keep 1–3 videos dated in the window (title + URL). Do not transcribe. A talk title can amplify a cluster; it is not a primary source for a platform change.
+Every run, from this skill folder:
+
+```bash
+bash scripts/fetch-youtube.sh 14
+```
+
+RSS: `https://www.youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA`
+
+Keep dated titles in the 14-day window. Optional: `web_search` `site:ai.engineer (talk OR conference OR schedule)` for upcoming events.
 
 ## Reddit (`web_search`, only if X + LinkedIn are thin)
 
