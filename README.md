@@ -39,7 +39,7 @@ claude plugin install daily-news-digest@daily-news-digest
 | X | Launches, Shopify, AI, GitHub chatter |
 | LinkedIn | How operators and Shopify people frame the same news |
 | GitHub | `scripts/fetch-github.sh` (API — not trending HTML) |
-| AI Engineer | `scripts/fetch-youtube.sh` (RSS — not `/videos` HTML) |
+| AI Engineer | `scripts/fetch-youtube.sh` ranks last 14 days by views/day — watch picks |
 
 Edit search strings in [references/rails.md](references/rails.md) only.
 

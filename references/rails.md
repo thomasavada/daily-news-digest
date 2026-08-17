@@ -76,9 +76,7 @@ Every run, from this skill folder:
 bash scripts/fetch-youtube.sh 14
 ```
 
-RSS: `https://www.youtube.com/feeds/videos.xml?channel_id=UCLKPca3kwwd-B59HNr-_lvA`
-
-Keep dated titles in the 14-day window. Optional: `web_search` `site:ai.engineer (talk OR conference OR schedule)` for upcoming events.
+RSS for dates + `yt-dlp` for view counts. Output is ranked by **views/day**. Recommend the top rows as watch picks. Optional: `web_search` `site:ai.engineer (talk OR conference OR schedule)` for upcoming events.
 
 ## Reddit (`web_search`, only if X + LinkedIn are thin)
 
