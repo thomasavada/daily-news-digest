@@ -1,6 +1,6 @@
 # daily-news-digest
 
-Team skill. Scan the news most people on the team skip: **Shopify updates**, **AI**, **e-commerce Shopify is focusing on**, **new launches**, **GitHub**. Graph is **X + LinkedIn** (not a YouTube recap).
+Team skill. Scan the news most people on the team skip: **Shopify updates**, **AI**, **e-commerce Shopify is focusing on**, **new launches**, **GitHub**. Graph is **X + LinkedIn**. Talks: **[AI Engineer](https://www.youtube.com/@aiDotEngineer)**.
 
 Triggers: `/daily-news-digest`, `/trend-radar`, “morning digest”, “what’s launching”, “LinkedIn scan”.
 
@@ -39,6 +39,7 @@ claude plugin install daily-news-digest@daily-news-digest
 | X | Launches, Shopify, AI, GitHub chatter |
 | LinkedIn | How operators and Shopify people frame the same news |
 | GitHub | Trending / releases (agents, MCP, commerce) |
+| AI Engineer | New [@aiDotEngineer](https://www.youtube.com/@aiDotEngineer) uploads (title + URL, 14 days) |
 
 Edit search strings in [references/rails.md](references/rails.md) only.
 

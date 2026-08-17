@@ -4,14 +4,14 @@
     "name": "thomasavada"
   },
   "metadata": {
-    "description": "Team scan: Shopify, AI, Shopify-shaped ecom, launches, GitHub, X + LinkedIn."
+    "description": "Team scan: Shopify, AI, ecom, launches, GitHub, X, LinkedIn, AI Engineer YouTube."
   },
   "plugins": [
     {
       "name": "daily-news-digest",
       "source": "./",
-      "version": "1.1.0",
-      "description": "Team scan: Shopify updates, AI and ecom trends, launches, GitHub, X and LinkedIn."
+      "version": "1.2.0",
+      "description": "Team scan: Shopify updates, AI and ecom, launches, GitHub, X, LinkedIn, AI Engineer YouTube."
     }
   ]
 }

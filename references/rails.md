@@ -2,7 +2,7 @@
 
 Single source for search strings. Edit here, not in SKILL.md.
 
-Team scan: Shopify updates, AI, e-commerce Shopify is pushing, launches, GitHub. Graph: X + LinkedIn.
+Team scan: Shopify updates, AI, e-commerce Shopify is pushing, launches, GitHub. Graph: X + LinkedIn. Talks: AI Engineer YouTube.
 
 ## Wire (`web_search`)
 
@@ -61,6 +61,17 @@ Window: last 7 days when the snippet has a date. `open_page` if readable; otherw
 | New | `"we just open sourced" OR "released v" (agent OR MCP OR shopify) site:github.com` |
 
 `open_page` github.com/trending or the repo if it looks like a real launch (release notes / README), not a one-star toy.
+
+## AI Engineer YouTube
+
+Channel: [youtube.com/@aiDotEngineer](https://www.youtube.com/@aiDotEngineer) · site [ai.engineer](https://ai.engineer)
+
+| Rail | Query | Window |
+|---|---|---|
+| Uploads | `site:youtube.com/@aiDotEngineer` | **14 days** |
+| Site | `site:ai.engineer (talk OR conference OR schedule)` | 14 days |
+
+Every run: `open_page` `https://www.youtube.com/@aiDotEngineer/videos`. Keep 1–3 videos dated in the window (title + URL). Do not transcribe. A talk title can amplify a cluster; it is not a primary source for a platform change.
 
 ## Reddit (`web_search`, only if X + LinkedIn are thin)
 
