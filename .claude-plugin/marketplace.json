@@ -4,14 +4,14 @@
     "name": "thomasavada"
   },
   "metadata": {
-    "description": "Same-day Tech/AI + Shopify digest (wire + X + Reddit)."
+    "description": "Team scan: Shopify, AI, Shopify-shaped ecom, launches, GitHub, X + LinkedIn."
   },
   "plugins": [
     {
       "name": "daily-news-digest",
       "source": "./",
-      "version": "1.0.0",
-      "description": "Daily briefing skill: Tech/AI and Shopify wire plus X/Reddit launches."
+      "version": "1.1.0",
+      "description": "Team scan: Shopify updates, AI and ecom trends, launches, GitHub, X and LinkedIn."
     }
   ]
 }

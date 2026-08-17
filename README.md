@@ -1,12 +1,12 @@
 # daily-news-digest
 
-Standalone agent skill. Same-day Tech/AI + Shopify wire, then X + Reddit launches.
+Team skill. Scan the news most people on the team skip: **Shopify updates**, **AI**, **e-commerce Shopify is focusing on**, **new launches**, **GitHub**. Graph is **X + LinkedIn** (not a YouTube recap).
 
-Triggers: `/daily-news-digest`, `/trend-radar`, “morning digest”, “what’s launching”.
+Triggers: `/daily-news-digest`, `/trend-radar`, “morning digest”, “what’s launching”, “LinkedIn scan”.
 
 This repo is the only source.
 
-## Install — clone into skills (simplest)
+## Install — clone into skills
 
 `SKILL.md` is at the repo root. Clone **into** the host skills directory — do not nest another folder.
 
@@ -31,10 +31,16 @@ claude plugin marketplace add thomasavada/daily-news-digest
 claude plugin install daily-news-digest@daily-news-digest
 ```
 
-## What the agent needs
+## What a run covers
 
-- Web search
-- X tools if the host has them. If not, it shells out to `grok -p` once, then still searches Reddit itself.
+| Sensor | Job |
+|---|---|
+| Wire | Shopify official blog + changelog (7 days), same-day AI + ecom |
+| X | Launches, Shopify, AI, GitHub chatter |
+| LinkedIn | How operators and Shopify people frame the same news |
+| GitHub | Trending / releases (agents, MCP, commerce) |
+
+Edit search strings in [references/rails.md](references/rails.md) only.
 
 ## Optional file destinations
 
@@ -50,8 +56,8 @@ See [references/file.md](references/file.md). Chat briefing is enough if nothing
 
 ```
 SKILL.md
-references/rails.md      # search strings — edit here
-references/file.md       # where to write the briefing
-.claude-plugin/          # plugin + marketplace catalog
-skills/daily-news-digest → same skill (for plugin discovery)
+references/rails.md
+references/file.md
+.claude-plugin/
+skills/daily-news-digest → same skill (plugin discovery)
 ```
