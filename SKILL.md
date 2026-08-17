@@ -24,7 +24,7 @@ If the user names a subset (“just Shopify”, “just X”), drop the other ra
 
 Queries live in [references/rails.md](references/rails.md) only.
 
-**Wire** — `web_search` the wire rows in rails.md (`num_results: 8` each). Prefer official or primary (SEC, changelog, company blog) over recaps.
+**Wire** — `web_search` the wire rows in rails.md (`num_results: 8` each). Prefer official or primary (SEC, changelog, company blog) over recaps. For the **Shopify official** row, `open_page` 1–2 posts dated in that row’s window (e.g. [enterprise blog](https://www.shopify.com/enterprise/blog/), shopify.com/news). Changelog recaps are not a substitute.
 
 **X** (required when `x_keyword_search` exists)
 

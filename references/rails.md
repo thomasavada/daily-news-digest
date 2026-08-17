@@ -6,10 +6,13 @@ Single source for search strings. Edit here, not in SKILL.md.
 
 Same-day only. Do not reuse yesterday's headlines.
 
-| Section | Queries (run both) |
-|---|---|
-| Tech & AI | `AI news today model release funding` · `OpenAI Anthropic Google Nvidia AI announcement` |
-| Shopify & ecom | `Shopify changelog today UCP Catalog MCP` · `ecommerce news today TikTok Shop Amazon merchant` |
+| Section | Queries (run both) | Window |
+|---|---|---|
+| Tech & AI | `AI news today model release funding` · `OpenAI Anthropic Google Nvidia AI announcement` | same-day |
+| Shopify & ecom | `Shopify changelog today UCP Catalog MCP` · `ecommerce news today TikTok Shop Amazon merchant` | same-day |
+| Shopify official | `site:shopify.com/enterprise/blog` · `site:shopify.com/news OR site:shopify.com/blog (AI OR Catalog OR UCP OR agentic)` | **7 days** |
+
+Do not reuse yesterday's headlines for same-day rows. Official Shopify research posts drop weekly — pull the last 7 days and `open_page` 1–2 dated in that window (enterprise blog, shopify.com/news). Do not summarize from the SERP snippet.
 
 Date the `since:` / `until:` only if the user pins a window. Default: `within_time:2d` on keyword queries (X advanced operator).
 
