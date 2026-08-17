@@ -1,57 +1,57 @@
 # daily-news-digest
 
-Standalone agent skill — this repo is the only source. It is not part of starlink-brain or any marketplace plugin.
-
-Same-day Tech/AI + Shopify/e-commerce wire, then X + Reddit launches.
+Standalone agent skill. Same-day Tech/AI + Shopify wire, then X + Reddit launches.
 
 Triggers: `/daily-news-digest`, `/trend-radar`, “morning digest”, “what’s launching”.
 
-## Clone (this is the skill folder)
+This repo is the only source.
 
-`SKILL.md` is at the repo root. Clone **into** the host’s skills directory — do not nest another folder.
+## Install — clone into skills (simplest)
+
+`SKILL.md` is at the repo root. Clone **into** the host skills directory — do not nest another folder.
 
 ```bash
-# Claude Code
 git clone https://github.com/thomasavada/daily-news-digest.git ~/.claude/skills/daily-news-digest
-
-# Grok
+# or
 git clone https://github.com/thomasavada/daily-news-digest.git ~/.grok/skills/daily-news-digest
-
-# Codex / other Agent Skills hosts
+# or
 git clone https://github.com/thomasavada/daily-news-digest.git ~/.agents/skills/daily-news-digest
 ```
-
-Update later:
 
 ```bash
 git -C ~/.claude/skills/daily-news-digest pull
 ```
 
-Then run `/daily-news-digest`.
+Then `/daily-news-digest`.
+
+## Install — Claude plugin
+
+```bash
+claude plugin marketplace add thomasavada/daily-news-digest
+claude plugin install daily-news-digest@daily-news-digest
+```
 
 ## What the agent needs
 
 - Web search
-- X tools if the host has them (`x_keyword_search`, `x_semantic_search`). If not, the skill shells out to `grok -p` once, then the agent still searches Reddit itself.
+- X tools if the host has them. If not, it shells out to `grok -p` once, then still searches Reddit itself.
 
 ## Optional file destinations
 
-Chat briefing is enough. If you want a file:
+See [references/file.md](references/file.md). Chat briefing is enough if nothing matches.
 
 | Env / path | What happens |
 |---|---|
 | `DIGEST_REPORTS_DIR` | Write `YYYY-MM-DD-digest.md` there |
-| `plugins/joy-knowledge/knowledge/reports/` in cwd | Same filename there |
 | `reports/` in cwd (or user said save) | Same filename there |
-| `OBSIDIAN_VAULT` or `~/Documents/Obsidian Vault` | Also log into that vault (raw + wiki source note) |
-
-Write once per day. Same-day second pull uses `-2`.
+| `OBSIDIAN_VAULT` or `~/Documents/Obsidian Vault` | Log into that vault |
 
 ## Layout
 
 ```
 SKILL.md
-references/rails.md
+references/rails.md      # search strings — edit here
+references/file.md       # where to write the briefing
+.claude-plugin/          # plugin + marketplace catalog
+skills/daily-news-digest → same skill (for plugin discovery)
 ```
-
-Edit search strings in `references/rails.md` only.

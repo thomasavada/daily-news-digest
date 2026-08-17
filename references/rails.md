@@ -4,17 +4,17 @@ Single source for search strings. Edit here, not in SKILL.md.
 
 ## Wire (`web_search`)
 
-Same-day only. Do not reuse yesterday's headlines.
-
 | Section | Queries (run both) | Window |
 |---|---|---|
 | Tech & AI | `AI news today model release funding` · `OpenAI Anthropic Google Nvidia AI announcement` | same-day |
 | Shopify & ecom | `Shopify changelog today UCP Catalog MCP` · `ecommerce news today TikTok Shop Amazon merchant` | same-day |
-| Shopify official | `site:shopify.com/enterprise/blog` · `site:shopify.com/news OR site:shopify.com/blog (AI OR Catalog OR UCP OR agentic)` | **7 days** |
+| Shopify official | `site:shopify.com/enterprise/blog` · `site:shopify.com/news OR site:shopify.dev/changelog (AI OR Catalog OR UCP OR agentic)` | **7 days** |
 
-Do not reuse yesterday's headlines for same-day rows. Official Shopify research posts drop weekly — pull the last 7 days and `open_page` 1–2 dated in that window (enterprise blog, shopify.com/news). Do not summarize from the SERP snippet.
+Same-day rows: do not reuse yesterday’s headlines.
 
-Date the `since:` / `until:` only if the user pins a window. Default: `within_time:2d` on keyword queries (X advanced operator).
+Shopify official: research and changelog drop weekly. `open_page` 1–2 items dated in the 7-day window (enterprise blog, shopify.com/news, shopify.dev/changelog). Do not stop at the SERP snippet.
+
+Date `since:` / `until:` only if the user pins a window. Default on X keyword queries: `within_time:2d`.
 
 ## X keyword (`x_keyword_search`, Latest)
 
@@ -55,6 +55,6 @@ One sentence per rail. `limit: 5`, `min_score_threshold: 0.2`.
 
 ## Handles worth a targeted `from:` pass (optional, max 3 extra calls)
 
-Only if the default rails look thin:
+Only if a launch or platform claim is still unconfirmed:
 
 `from:shopify` · `from:tobi` · `from:OpenAI` · `from:AnthropicAI` · `from:ShopifyDevs`

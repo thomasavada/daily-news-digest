@@ -1,0 +1,17 @@
+{
+  "name": "daily-news-digest",
+  "owner": {
+    "name": "thomasavada"
+  },
+  "metadata": {
+    "description": "Same-day Tech/AI + Shopify digest (wire + X + Reddit)."
+  },
+  "plugins": [
+    {
+      "name": "daily-news-digest",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Daily briefing skill: Tech/AI and Shopify wire plus X/Reddit launches."
+    }
+  ]
+}
