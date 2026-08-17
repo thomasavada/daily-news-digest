@@ -1,6 +1,8 @@
 # daily-news-digest
 
-Agent skill. Same-day Tech/AI + Shopify/e-commerce wire, then X + Reddit launches.
+Standalone agent skill — this repo is the only source. It is not part of starlink-brain or any marketplace plugin.
+
+Same-day Tech/AI + Shopify/e-commerce wire, then X + Reddit launches.
 
 Triggers: `/daily-news-digest`, `/trend-radar`, “morning digest”, “what’s launching”.
 
