@@ -44,7 +44,7 @@ Queries live in [references/rails.md](references/rails.md) only.
 
 **GitHub** — do **not** `open_page` github.com/trending (JS-walled). Run `bash scripts/fetch-github.sh` from this skill folder. Keep repos with real stars or `org:Shopify`. `open_page` a README only for 1–2 that cluster with the briefing.
 
-**AI Engineer YouTube** — do **not** `open_page` the `/videos` tab (JS-walled). Run `bash scripts/fetch-youtube.sh 14` from this skill folder (RSS + view counts). The script ranks by **views/day** in the window. In the briefing, recommend the **top 4–6** as “gợi ý xem”: title, views, views/day, one-line topic, URL. Group the rest by theme only if they add a new cluster. Do not transcribe talks. High views ≠ a platform changelog.
+**AI Engineer YouTube** — do **not** `open_page` the `/videos` tab (JS-walled). Run `bash scripts/fetch-youtube.sh 30` from this skill folder. Talks drop in **batches**. Rank by **total views**. In the briefing, **gợi ý xem = WATCH** (default: **≥ 50k views** in the last ~month). List those first with views + date + topic + URL. Do not pad with low-view uploads from the newest batch unless none hit 50k — then say the latest batch is still accumulating and name the current leader. Do not transcribe. High views ≠ a platform changelog.
 
 **Reddit** — optional, only if X + LinkedIn are thin on merchant pain. Same rows as rails.md.
 
@@ -89,11 +89,11 @@ What Shopify is focusing on (Catalog, UCP, agentic storefronts, WebMCP). Skip ge
 - **owner/repo (★, date)** — one sentence. URL. Prefer org:Shopify and new high-star agent/MCP repos.
 
 ## AI Engineer — gợi ý xem
-Ranked by views/day in the last 14 days (script output). Top 4–6 only:
+Only `WATCH` rows from `scripts/fetch-youtube.sh 30` (≥50k views in ~1 month):
 
-- **N views · ~N/day · Title** — topic in one clause. Why it is worth 20 minutes. [watch](https://youtube.com/watch?v=…)
+- **N views · YYYY-MM-DD · Title** — topic in one clause. [watch](https://youtube.com/watch?v=…)
 
-Then one line: the theme the channel is pushing this window (e.g. agents-on-the-web, context, computer use).
+If zero WATCH: say the latest batch is still accumulating. One line on the theme of this drop.
 
 ## X / LinkedIn
 How operators and Shopify people are talking about the same clusters. Real post URLs. Skip if already covered above.

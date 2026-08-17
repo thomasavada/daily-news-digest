@@ -73,10 +73,10 @@ Do not fetch `/videos` HTML.
 Every run, from this skill folder:
 
 ```bash
-bash scripts/fetch-youtube.sh 14
+bash scripts/fetch-youtube.sh 30
 ```
 
-RSS for dates + `yt-dlp` for view counts. Output is ranked by **views/day**. Recommend the top rows as watch picks. Optional: `web_search` `site:ai.engineer (talk OR conference OR schedule)` for upcoming events.
+Last ~30 days, ranked by **total views**. `WATCH` = ≥50k views (batch drops, not views/day). Only those go in “gợi ý xem”. Optional: `web_search` `site:ai.engineer (talk OR conference OR schedule)` for upcoming events.
 
 ## Reddit (`web_search`, only if X + LinkedIn are thin)
 
